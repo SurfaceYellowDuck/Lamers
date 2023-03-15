@@ -1,7 +1,7 @@
 interface TreeInterface {
-    fun insert()
-    fun remove()
-    fun find()
+    fun <K: Comparable<K>, V> insert(key: K, value: V)
+    fun <K: Comparable<K>, V> remove(key: K, value: V)
+    fun <K: Comparable<K>, V> find(key: K): V
     fun clear()
 }
 
