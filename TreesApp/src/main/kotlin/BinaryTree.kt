@@ -31,9 +31,9 @@ class BinaryTree<K: Comparable<K>, V>: TreeInterface {
 class BinaryNode<K : Comparable<K>, V>(
     override val key: K,
     override val value: V,
-) : Node<K, V>{
-    override var left: Node<K, V>? = null
-    override var right: Node<K, V>? = null
+) : NodeInterface<K, V>{
+    override var left: NodeInterface<K, V>? = null
+    override var right: NodeInterface<K, V>? = null
 }
 
 fun main(){
