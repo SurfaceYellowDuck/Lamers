@@ -1,19 +1,19 @@
-class BinaryTree<K: Comparable<K>, V>: TreeInterface {
+class BinarySearchTree<K: Comparable<K>, V>: TreeInterface<K, V> {
     var rootNode: BinaryNode<K, V>? = null
-    override fun insert() {
+    override fun insert(key: K, value: V) {
         //add element
         //make element as a root, if root is null
         //if root is not null it adds element to left or right branch
-        //if left or right is not null - it check it, and add if right or left is null
+        //if left or right is not null - it checks it, and adds it if right or left is null
         TODO("Not yet implemented")
     }
 
-    override fun remove() {
+    override fun remove(key: K, value: V) {
         //remove node by key
         TODO("Not yet implemented")
     }
 
-    override fun find() {
+    override fun find(key: K): V {
         //this method gives element by key
         TODO("Not yet implemented")
     }
@@ -37,7 +37,7 @@ class BinaryNode<K : Comparable<K>, V>(
 }
 
 fun main(){
-    val test_tree = BinaryTree<Int, String>()
+    val test_tree = BinarySearchTree<Int, String>()
     test_tree.rootNode = BinaryNode(123, "erefe")
     val test_1 = mutableListOf<Int>(12341, 324)
     test_tree.rootNode!!.left = BinaryNode(123, "world_0")
